@@ -18,3 +18,16 @@ make
 fi
 
 /opt/vpnclient/vpnclient start
+
+echo '
+#sudo ./vpnclient start
+#./vpncmd
+
+niccreate VPN
+accountcreate myconn1
+accountpass
+accountconn myconn1
+accountlist
+
+#sudo dhclient vpn_vpn
+'
