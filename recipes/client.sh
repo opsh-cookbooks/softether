@@ -1,3 +1,12 @@
+case "${node[os]} ${node[version]}" in
+ubuntu*)
+pkg_essential="curl build-essential make"
+apt-install ${pkg_essential} 
+;;
+*)
+exit 1
+;;
+esac
 
 tempfile="/tmp/vpnclient.tar.gz"
 
