@@ -29,3 +29,10 @@ fi
 
 /opt/vpnserver/vpnserver start
 
+
+echo '
+#for L2TP port forward (sample)
+
+iptables -t nat -I PREROUTING -p udp --dport 4500 -j DNAT --to-destination 192.168.122.29:4500
+iptables -t nat -I PREROUTING -p udp --dport 500 -j DNAT --to-destination 192.168.122.29:500
+'
