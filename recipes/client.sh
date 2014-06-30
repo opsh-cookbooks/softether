@@ -26,7 +26,9 @@ make
 
 fi
 
-/opt/vpnclient/vpnclient start
+template "client-init-d.conf" "/etc/init.d/vpnclient"
+chmod 755 /etc/init.d/vpnclient
+service vpnclient restart
 
 echo '
 #sudo ./vpnclient start
