@@ -26,7 +26,7 @@ make
 
 fi
 
-template "client-init-d.conf" "/etc/init.d/vpnclient"
+template_cp "client-init-d.conf" "/etc/init.d/vpnclient"
 chmod 755 /etc/init.d/vpnclient
 service vpnclient restart
 
